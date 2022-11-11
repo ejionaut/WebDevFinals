@@ -1,0 +1,14 @@
+@font-face { font-family: 'Roboto-Regular'; src: url(./styles/fonts/Roboto-Regular.ttf);}
+@font-face { font-family: 'Roboto-thin'; src: url(./styles/fonts/Roboto-Thin.ttf);}
+@font-face { font-family: 'Raleway'; src: url(./styles/fonts/Raleway-VariableFont_wght.ttf);}
+@font-face { font-family: 'Quicksand'; src: url(./styles/fonts/Quicksand-VariableFont_wght.ttf);}
+
+:root {
+    --clr-drk-purple: #221B23;
+    --clr-lgt-sky-blue: #6FADC8;
+
+    --fnt-quick: 'Quicksand';
+    --fnt-R-thin: 'Roboto-thin';
+    --fnt-R-reg: 'Roboto-Regular';
+    --fnt-rale: 'Raleway';
+}
