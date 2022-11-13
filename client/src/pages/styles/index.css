@@ -3,6 +3,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--fnt-roboto-light);
 }
 
 body {
@@ -30,6 +31,10 @@ img {
     z-index: 5;
 }
 
+input {
+    font-family: var(--fnt-Quicksand);
+}
+
 .Main_Section {
     display: flex;
     flex-direction: column;
@@ -37,7 +42,7 @@ img {
     align-items: center;
 
     padding: 4rem 10rem;
-    box-shadow: 2rem 1.5rem 3rem lightblue;
+    box-shadow: 1rem 1.5rem 2rem lightblue;
     position: relative;
     overflow: hidden;
 }
@@ -103,6 +108,28 @@ img {
     button:hover {
         background-color: var(--clr-hover-lgt-blue);
     }    
+
+    input:focus {
+        border-color: var(--clr-focus-blue);
+        outline: none;
+    }
+
+    .error_message { 
+        color: rgb(178, 62, 62);
+        position: absolute;
+        top: 2rem;
+        left: 13rem;
+        background-color: var(--clr-drk-purple);
+        width: 20rem;
+        height: 3rem;
+        z-index: 10;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1ch;
+    }
+
 }
 
 @media only screen and (max-width: 650px) {
