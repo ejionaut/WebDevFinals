@@ -1,4 +1,7 @@
+import React from 'react';
 import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from './pages';
 import teacherPage from './pages/teacherModule';
 import studentPage from './pages/studentModule';
 

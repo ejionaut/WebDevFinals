@@ -1,6 +1,6 @@
 import React from "react"
 
-const teacherModule = () => {
+const loginModule = () => {
     return(
         <div className="Main_Section">
             <main className="Center_Section">
@@ -15,4 +15,4 @@ const teacherModule = () => {
     );
 };
 
-export default teacherModule;
+export default loginModule;

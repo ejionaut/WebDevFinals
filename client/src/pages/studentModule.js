@@ -15,3 +15,5 @@ const studentModule = () => {
         </div>
     );
 };
+
+export default studentModule;
