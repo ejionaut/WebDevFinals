@@ -1,8 +1,19 @@
 import './App.css';
-import loading from './Loading';
+import teacherPage from './pages/teacherModule';
+import studentPage from './pages/studentModule';
 
 function App() {
-  return <loading />
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path='/pages/studentModule' element={<studentPage/>} />
+          <Route path='/pages/teacherModule' element={<teacherPage/>} />
+        </Routes>
+    </Router>
+    </div>
+  );
 }
 
 export default App;
