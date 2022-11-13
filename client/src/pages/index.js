@@ -1,17 +1,23 @@
 import React from "react"
+import "./styles/index.css"
+import logo from "./styles/images/logo_square.png"
 
 const loginModule = () => {
     return(
-        <div className="Main_Section">
-            <main className="Center_Section">
-                <section-left className="Nav_Bar_Left">
-
-                </section-left>
-                <section-right className="Data_Present">
-
-                </section-right>
-            </main>
-        </div>
+        <main className="Main_Section">
+            <img src={logo} alt="" />
+            <div className="input_section">
+                <div className="username_section">
+                    <label className="username_label"> User ID: </label>
+                    <input type="text"/>
+                </div>
+                <div className="password_section">
+                    <label className="password_label"> Password: </label>
+                    <input type="password" />
+                </div>
+                <button> Login </button>
+            </div>
+        </main>
     );
 };
 
