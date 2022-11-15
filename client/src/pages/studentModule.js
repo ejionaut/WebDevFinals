@@ -4,7 +4,7 @@ const studentModule = () => {
     return(
         <div className="Main_Section">
             <header className="Header_Section">
-
+                <h1> HELLLO</h1>
             </header>
             <main className="Center_Section">
 

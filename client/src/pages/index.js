@@ -2,10 +2,39 @@ import React from "react";
 import "./styles/index.css";
 import logo from "./styles/images/logo_square.png";
 import { useState } from "react";
+import Axios from 'axios'
+import {useNavigate} from "react-router-dom"
 
 const LoginModule = () => {
     const [userId, setUserId] = useState("");
     const [passwordId, setPassword] = useState("");
+    const [accountList, setAccountList] = useState([]);
+    const navigate = useNavigate();
+
+    const getAccounts = () => {
+        Axios.get('http://localhost:3001/accounts').then((Response) => {
+            setAccountList(Response.data)
+            console.log(accountList)
+    })
+        accountCheck();
+    }
+
+    const accountCheck = () => {
+        for (let i = 0; i <  accountList.length; i++) {
+            if(accountList[i].AccID.toString() === userId && accountList[i].Password === passwordId){
+                if(userId >= 2000) {
+                    console.log("Rigt")
+                    navigate('/studentPage');
+                } else {
+                    console.log("false")
+                    navigate('/teacherPage');
+                }
+            } else {
+                console.log(accountList[i].Password)
+                console.log("No student")
+            }
+        }
+    }
 
     return(
         <main className="Main_Section">
@@ -26,25 +55,10 @@ const LoginModule = () => {
                         setPassword(event.target.value);
                     }}/>
                 </div>
-                <button onClick={errorChoice(userId, passwordId)}> Login </button>
+                <button onClick={getAccounts}> Login </button>
             </div>
         </main>
     );
 };
-
-function errorChoice(userId, passwordId) {
-    const codeID = "test";
-    const passID = "test";
-
-    if (userId.value === '' || userId.value == null && passwordId.value === '' || passwordId.value === null) {
-        document.getElementById('error_message_text').innerHTML = "<span>ERROR:</span> The input is blank";
-        document.getElementById('error_message').style.visibility = "visible";
-    } else if (userId.value !== codeID.value && passID.value !== passwordId.value) {
-        document.getElementById('error_message_text').innerHTML = "<span>ERROR:</span> The username and password does not match";
-        document.getElementById('error_message').style.visibility = "visible";
-    } else if (userId.value === codeID.value && passID === passwordId.value) {
-
-    }
-}
 
 export default LoginModule;
