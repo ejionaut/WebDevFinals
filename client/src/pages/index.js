@@ -21,13 +21,13 @@ const LoginModule = () => {
 
     const accountCheck = () => {
         for (let i = 0; i <  accountList.length; i++) {
-            if(accountList[i].AccID.toString() === userId && accountList[i].Password === passwordId){
+            if(accountList[i].user_id.toString() === userId && accountList[i].password === passwordId){
                 if(userId >= 2000) {
                     navigate('/studentPage');
                 } else {
                     navigate('/teacherPage');
                 }
-            } else if(accountList[i].AccID.toString() === userId && accountList[i].Password !== passwordId) {
+            } else if(accountList[i].user_id.toString() === userId && accountList[i].password !== passwordId) {
                 errorHandling("WP")
             } else {
                 errorHandling("NU")
