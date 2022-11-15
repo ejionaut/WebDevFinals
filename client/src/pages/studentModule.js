@@ -5,7 +5,7 @@ import logoW from "./styles/images/logo_white.png"
 import {useNavigate} from "react-router-dom"
 
 const StudentModule = () => {
-    const navigate = useNavigate();
+    let navigate = useNavigate();
 
     return(
         <div className="student_container">
@@ -15,14 +15,53 @@ const StudentModule = () => {
                         <h1 className="greetingTXT"> Student Name, Hello! </h1>
                         <div className="header__buttons">
                             <button className="buttons">Options</button>
-                            <button className="buttons" onClick={navigate('/')}>Log out</button>
+                            <button className="buttons" onClick={() => {navigate('/');}}>Log out</button>
                         </div>
                     </div>
                 </header>
                 <main className="Center_Section">
                     <div className="container_left">
                         <div className="display_quizes">
-                            text
+                            <div className="quiz">
+                                <h1>NAME OF QUIZ</h1>
+                                <div>
+                                    <h2>Due date: XX/XX/XXXX</h2>
+                                    <h2>Teacher: Pensil</h2>
+                                </div>
+                                <button>Start</button>
+                            </div>
+                            <div className="quiz">
+                                <h1>NAME OF QUIZ</h1>
+                                <div>
+                                    <h2>Due date: XX/XX/XXXX</h2>
+                                    <h2>Teacher: Pensil</h2>
+                                </div>
+                                <button>Start</button>
+                            </div>
+                            <div className="quiz">
+                                <h1>NAME OF QUIZ</h1>
+                                <div>
+                                    <h2>Due date: XX/XX/XXXX</h2>
+                                    <h2>Teacher: Pensil</h2>
+                                </div>
+                                <button>Start</button>
+                            </div>
+                            <div className="quiz">
+                                <h1>NAME OF QUIZ</h1>
+                                <div>
+                                    <h2>Due date: XX/XX/XXXX</h2>
+                                    <h2>Teacher: Pensil</h2>
+                                </div>
+                                <button>Start</button>
+                            </div>
+                            <div className="quiz">
+                                <h1>NAME OF QUIZ</h1>
+                                <div>
+                                    <h2>Due date: XX/XX/XXXX</h2>
+                                    <h2>Teacher: Pensil</h2>
+                                </div>
+                                <button>Start</button>
+                            </div>
                         </div>
                     </div>
                     <div className="container_right">

@@ -66,6 +66,12 @@ footer img {
     background-color: var(--clr-Main-card-slot-student);
     height: 90%;
     width: 90%;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5rem;
+    column-gap: 1rem;
 }
 
 .container_right {
@@ -93,7 +99,12 @@ footer img {
 
 .buttons_right_container button {
     width: 80%;
-    height: 2rem;
+    height: 2.4rem;
+    font-size: 2ch;
+    font-weight: bold;
+    background-color: var(--clr-Main-Right-Container-Buttons);
+    border: none;
+    color: var(--clr-white);
 }
 
 .group__mates {
@@ -108,5 +119,23 @@ footer img {
 .group__mates:hover {
     color: var(--clr-lgt-blue);
     cursor: pointer;
+ }
+
+ .quiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 23rem;
+    height: 4rem;
+    font-size: 1ch;
+
+    background-color: var(--clr-Main-Quiz);
+    padding: 0.4rem;
+ }
+
+ .quiz button {
+    border: none;
+    border-radius: 1rem;
+    width: 3rem;
  }
 
