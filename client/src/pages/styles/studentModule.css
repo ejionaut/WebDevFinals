@@ -105,6 +105,12 @@ footer img {
     background-color: var(--clr-Main-Right-Container-Buttons);
     border: none;
     color: var(--clr-white);
+    cursor: pointer;
+    transition: background-color 0.17s ease-in-out;
+}
+
+.buttons_right_container button:hover{
+    background-color: var(--clr-Main-Right-Container-Buttons-Hover);
 }
 
 .group__mates {

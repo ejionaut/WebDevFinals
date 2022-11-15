@@ -4,6 +4,10 @@
     color: white;
 }
 
+.Center_Section{
+    background-color: #dbdbdb;
+}
+
 .teacher_module_button_container{
     background-color: var(--clr-Teacher-Module-But-Back);
     height: 80%;

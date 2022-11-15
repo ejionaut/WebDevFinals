@@ -1,0 +1,37 @@
+@import url(./FontAndColors.css);
+
+body{
+    background-color: var(--clr-drk-purple);
+}
+
+.ErrorPage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Center_Section{
+    color: white;
+    border: 0.2rem solid white;
+    padding: 10rem;
+}
+
+.ErrorPage img {
+    position: absolute;
+    top: 13rem;
+    animation: errorRotate 2s ease-in-out infinite;
+}
+
+@keyframes errorRotate {
+    0% {
+        transform: rotate(10deg);
+    } 50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}

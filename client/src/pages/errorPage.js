@@ -1,15 +1,13 @@
 import React from "react"
+import "./styles/errorPage.css";
+import logoW from "./styles/images/logo_white.png"
 
 const ErrorPage = () => {
     return(
-        <div className="Main_Section">
+        <div className="ErrorPage">
+            <img className ="studentLOGO" src={logoW} alt=""/>
             <main className="Center_Section">
-                <section-left className="Nav_Bar_Left">
-
-                </section-left>
-                <section-right className="Data_Present">
-
-                </section-right>
+                <h1>ERROR 404: Page not found</h1>
             </main>
         </div>
     );
