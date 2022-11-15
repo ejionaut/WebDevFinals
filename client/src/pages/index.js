@@ -23,25 +23,25 @@ const LoginModule = () => {
         for (let i = 0; i <  accountList.length; i++) {
             if(accountList[i].AccID.toString() === userId && accountList[i].Password === passwordId){
                 if(userId >= 2000) {
-                    console.log("Rigt")
                     navigate('/studentPage');
                 } else {
-                    console.log("false")
                     navigate('/teacherPage');
                 }
+            } else if(accountList[i].AccID.toString() === userId && accountList[i].Password !== passwordId) {
+                errorHandling("WP")
             } else {
-                console.log(accountList[i].Password)
-                console.log("No student")
+                errorHandling("NU")
             }
         }
     }
 
     return(
-        <main className="Main_Section">
+        <div className="Main_Container">
+            <main className="Main_Section">
             <div id="error_message" className="error_message">
-                <h1 id="error_message_text">e</h1>
+                <h1 id="error_message_text"> </h1>
             </div>
-            <img src={logo} alt="" />
+            <img className="login_logo" src={logo} alt="" />
             <div className="input_section">
                 <div className="username_section">
                     <label className="username_label"> User ID: </label>
@@ -55,10 +55,24 @@ const LoginModule = () => {
                         setPassword(event.target.value);
                     }}/>
                 </div>
-                <button onClick={getAccounts}> Login </button>
+                <button className="login_btn" onClick={getAccounts}> Login </button>
             </div>
         </main>
+        </div>
     );
 };
+
+function errorHandling(error){
+    let errorText = "<span>[Error]:</span>"
+    if(error === "WP") {
+        errorText += " Wrong Password."
+    } else if (error === "NU") {
+        errorText += " Not a valid account."
+    } else {
+        errorText += " Empty"
+    }
+
+    document.getElementById("error_message_text").innerHTML = errorText;
+}
 
 export default LoginModule;

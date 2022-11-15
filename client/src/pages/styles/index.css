@@ -6,7 +6,7 @@
     font-family: var(--fnt-roboto-light);
 }
 
-body {
+.Main_Container {
     background-color: var(--clr-drk-purple);
     color: var(--clr-white);
 
@@ -17,7 +17,7 @@ body {
     align-items: center;
 }
 
-button {
+.login_btn {
     width: 100%;
     background-color: var(--clr-lgt-blue);
     border: none;
@@ -25,7 +25,7 @@ button {
     color: var(--clr-white);
 }
 
-img {
+.login_logo {
     width: 65%;
     margin-bottom: 2rem;
     z-index: 5;
@@ -100,12 +100,12 @@ input {
 }
 
 @media all and (min-width: 651px) {
-    button {
+    .login_btn {
         cursor: pointer;
         transition: background-color 0.13s ease-in-out;
     }
 
-    button:hover {
+    .login_btn:hover {
         background-color: var(--clr-hover-lgt-blue);
     }    
 
