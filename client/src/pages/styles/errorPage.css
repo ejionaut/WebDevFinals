@@ -14,14 +14,19 @@ body{
 }
 
 .Center_Error_Section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
     border: 0.2rem solid white;
     padding: 10rem;
+    position: relative;
 }
 
 .ErrorPage img {
     position: absolute;
-    top: 13rem;
+    top: -14rem;
+    width: 40%;
     animation: errorRotate 2s ease-in-out infinite;
 }
 

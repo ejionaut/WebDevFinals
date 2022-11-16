@@ -5,8 +5,8 @@ import logoW from "./styles/images/logo_white.png"
 const ErrorPage = () => {
     return(
         <div className="ErrorPage">
-            <img className ="studentLOGO" src={logoW} alt=""/>
             <main className="Center_Error_Section">
+            <img className ="studentLOGO" src={logoW} alt=""/>
                 <h1>ERROR 404: Page not found</h1>
             </main>
         </div>
