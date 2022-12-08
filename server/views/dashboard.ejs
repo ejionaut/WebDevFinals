@@ -1,21 +1,21 @@
-import React from "react"
-import "./styles/studentModule.css";
-import logo from "./styles/images/logo_square.png";
-import logoW from "./styles/images/logo_white.png"
-import {useNavigate} from "react-router-dom"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Quiz Page</title>
 
-const StudentModule = () => {
-    let navigate = useNavigate();
-
-    return(
-        <div className="student_container">
-        <header className="Header_Section">
-            <img className ="studentLOGO" src={logo} alt=""/>
+    <link rel="stylesheet" href="/css/studentModule.css">
+</head>
+<body>
+    <header className="Header_Section">
+            <img className ="studentLOGO" src="styles/images/logo_square.png" alt=""/>
                     <div className="header__greet">
                         <h1 className="greetingTXT"> Student Name, Hello! </h1>
                         <div className="header__buttons">
                             <button className="buttons">Options</button>
-                            <button className="buttons" onClick={() => {navigate('/');}}>Log out</button>
+                            <button className="buttons">Log out</button>
                         </div>
                     </div>
                 </header>
@@ -74,31 +74,5 @@ const StudentModule = () => {
                         </div>
                     </div>
                 </main>
-                <footer className="Footer_Section">
-                    <img src={logoW} alt=""/>
-                    <div>
-                        <h3 className="group__mates">
-                            Jun Roy Gahid
-                        </h3>
-                        <h3 className="group__mates">
-                            Danielle Nicole Javier
-                        </h3>
-                        <h3 className="group__mates">
-                            El Charis Laguitan
-                        </h3>
-                        <h3 className="group__mates">
-                            Joanne Mangsat
-                        </h3>
-                        <h3 className="group__mates">
-                            Eugene Justin Pangwi
-                        </h3>
-                        <h3 className="group__mates">
-                            Francisco Miguel Villa
-                        </h3>
-                    </div>
-                </footer>
-            </div>
-    )
-};
-
-export default StudentModule;
+</body>
+</html>

@@ -1,6 +1,6 @@
 @import url(./FontAndColors.css);
 
-.student_container{
+body{
     background-color: var(--clr-Main-body-modules);
     color: var(--clr-white);
 }

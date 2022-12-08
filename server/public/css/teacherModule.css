@@ -1,7 +1,8 @@
 @import url(./FontAndColors.css);
+@import url(./studentModule.css);
 
-.teacher_container{
-    color: white;
+header {
+    width: 100%;
 }
 
 .Center_Section{

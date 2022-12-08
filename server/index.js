@@ -1,28 +1,30 @@
+//import dependencies
 const express = require("express")
-const app = express();
-const mysql = require("mysql")
+const path = require("path")
 const cors = require("cors")
 
+//import routes
+const authRoute = require("./routes/authRoute")
+
+//express set-up
+const app = express();
+app.set("view engine", "ejs")
+app.use(express.urlencoded({ extended: false }))
+app.use(express.static(path.join(__dirname, "public")))
 app.use(cors());
 app.use(express.json());
 
-const db = mysql.createConnection({
-    user: 'root',
-    host: 'localhost',
-    password: '',
-    database: 'maindatabase'
+//express routes
+app.use(authRoute)
+
+app.get("/", (req, res) => {
+    if(req.session){
+        res.redirect("/dashboard")
+    } else {
+        res.redirect("/login")
+    }
 })
 
-app.get("/accounts", (req, res) => {
-    db.query("SELECT * FROM accounts", (err, result) => {
-        if(err) {
-            console.log(err)
-        } else {
-            res.send(result)
-        }
-    })
-})
-
-app.listen(3001, () => {
+app.listen(3001, '0.0.0.0', () => {
     console.log("Server is running on port 3001.")
 })
