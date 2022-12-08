@@ -4,11 +4,11 @@ const path = require("path")
 const cors = require("cors")
 const session = require("express-session")
 
-//import routes
+// import routes
 const authRoute = require("./routes/authRoute")
 const examRoute = require("./routes/examRoute")
 
-//express set-up
+// express set-up
 const app = express();
 app.set("view engine", "ejs")
 app.use(express.urlencoded({ extended: false }))
@@ -22,7 +22,13 @@ app.use(session({
     saveUninitialized: false
 }))
 
-//express routes
+// // disable caching to every route
+// app.use(function(req, res, next) {
+//     res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0')
+//     next()
+// })
+
+// express routes
 app.use(authRoute)
 app.use(examRoute)
 
