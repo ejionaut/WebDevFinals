@@ -1,13 +1,7 @@
 const express = require("express")
 const router = express.Router()
 
-const { auth, login, logout } = require("../public/js/auth")
 const { stud_dashboard } = require("../public/js/dashboard")
-
-//routes for authorization
-router.post("/login", auth)
-router.get("/login", login)
-router.post("/logout", logout)
 
 //routes for student
 router.get("/dashboard", stud_dashboard)

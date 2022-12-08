@@ -1,5 +1,10 @@
 const stud_dashboard = ((req, res) => {
-    res.render("dashboard")
+    if(req.session.loggedIn){
+        res.render("dashboard")
+    }else{
+        res.redirect("/login")
+    }
+    
 })
 
 module.exports = {

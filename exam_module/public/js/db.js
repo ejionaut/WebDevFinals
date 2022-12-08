@@ -4,7 +4,7 @@ const db = mysql.createConnection({
     user: 'root',
     host: 'localhost',
     password: '',
-    database: 'maindatabase'
+    database: 'nycto_db'
 })
 
 module.exports = db
